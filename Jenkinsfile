@@ -8,6 +8,8 @@ node {
     }
 
     stage('Build image') {
+       sh 'sudo usermod -a -G docker jenkins'
+
   
        app =  docker.build("3788/gitops")
     }
