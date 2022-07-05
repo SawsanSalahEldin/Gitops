@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = sh ' sudo docker.build("3788/gitops")'
+       app =  docker.build("3788/gitops")
     }
 
     stage('Test image') {
